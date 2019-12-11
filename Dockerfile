@@ -1,6 +1,6 @@
 FROM debian:10-slim
 
-RUN apt-get update && apt-get install -y libaio1
+RUN apt-get update && apt-get install -y libaio1 unzip
 
 COPY instantclient_12_1.zip ./
 RUN unzip instantclient_12_1.zip && \
