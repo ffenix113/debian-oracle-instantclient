@@ -1,6 +1,6 @@
-FROM frolvlad/alpine-glibc
+FROM debian:10-slim
 
-RUN apk update && apk add libaio
+RUN apt-get update && apt-get install -y libaio1
 
 COPY instantclient_12_1.zip ./
 RUN unzip instantclient_12_1.zip && \
